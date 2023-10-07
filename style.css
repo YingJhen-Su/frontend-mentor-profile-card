@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* || RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* || VARIABLES */
+:root {
+    /* FONT */
+    --FF: 'Kumbh Sans', sans-serif;
+
+    /* COLOR */
+    --BGCOLOR: hsl(185, 75%, 39%);
+    --MAIN-COLOR: #FFF;
+    --FONT-COLOR: hsl(229, 23%, 23%);
+    --FONT-COLOR-FADE: hsl(227, 10%, 46%);
+    --BORDER-COLOR-PIC: #FFF;
+    --SHADOW-COLOR: #333;
+    --HR-COLOR: hsla(0, 0%, 59%, 0.35);
+    
+    /* BORDERS */
+    --BORDER-PIC: 5px solid var(--BORDER-COLOR-PIC);
+
+    /* MARGIN */
+    --MARGIN: 1.25em;
+
+    /* PADDING */
+    --PADDING: 1.25em;
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.fade {
+    color: var(--FONT-COLOR-FADE);
+    font-weight: normal;
+}
+
+/* || GENERAL　STYLES */
+body {
+    font-family: var(--FF);
+    color: var(--FONT-COLOR);
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--BGCOLOR);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 0.875rem;
+    font-weight: normal;
+    color: var(--FONT-COLOR-FADE);
+}
+
+p {
+    font-size: 0.625rem;
+    color: var(--FONT-COLOR-FADE);
+}
+
+/* || MAIN */
+.main {
+    width: 350px;
+    background-color: var(--MAIN-COLOR);
+    background-image: url(./images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 5px -3px var(--SHADOW-COLOR);
+}
+
+.main__figure {
+    width: 106px;
+    height: 106px;
+    margin: 5.5em auto 1.25em;
+    border-radius: 50%;
+    border: var(--BORDER-PIC);
+    overflow: hidden;
+}
+
+.main__h2 {
+    margin-bottom: 0.8rem;
+}
+
+.main__ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: var(--PADDING) 0;
+    margin-top: var(--MARGIN);
+    border-top: 2px solid var(--HR-COLOR);
+}
+.main__li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+}
